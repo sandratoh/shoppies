@@ -4,7 +4,7 @@
 .button,
 .button--nominate,
 .button--remove {
-  @include height-width-style(36px, 120px);
+  @include height-width(36px, 120px);
 
   .MuiButton-label {
     @include typography-style($heading-font, 16, $semibold-weight);
@@ -13,7 +13,7 @@
 
 .button--cancel,
 .button--confirm {
-  @include height-width-style(63px, 240px);
+  @include height-width(63px, 240px);
 
   .MuiButton-label {
     @include typography-style($heading-font, 24, $semibold-weight);
