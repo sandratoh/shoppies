@@ -3,3 +3,8 @@
   font-size: $size;
   font-weight: $weight;
 }
+
+@mixin height-width-style($height, $width) {
+  height: $height;
+  width: $width;
+}
