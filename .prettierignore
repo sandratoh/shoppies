@@ -1,3 +1,6 @@
+# Config folders
+.storybook
+
 # Dependencies
 node_modules
 
