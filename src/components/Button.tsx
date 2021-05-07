@@ -13,6 +13,7 @@ interface IProps {
   color?: 'primary' | 'secondary';
   confirm?: boolean;
   disabled?: boolean;
+  link?: boolean;
   nominate?: boolean;
   onClick?: () => void;
   remove?: boolean;
@@ -25,6 +26,7 @@ export const CTAButton: React.FC<IProps> = props => {
     'button--remove': props.remove,
     'button--cancel': props.cancel,
     'button--confirm': props.confirm,
+    'button--link': props.link,
   });
 
   return (

@@ -1,5 +1,5 @@
 // Components
-import CardBanner from '../components/CardBanner';
+import CardBanner from '../components/Nomination/CardBanner';
 
 export default {
   title: 'CardBanner',

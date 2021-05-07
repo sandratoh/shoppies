@@ -3,7 +3,7 @@ import SearchBar from './SearchBar';
 
 // Stylesheet
 import './App.scss';
-import NominationCard from './NominationCard';
+import NominationCard from './Nomination/NominationCard';
 
 function App() {
   return (

@@ -19,3 +19,12 @@
     @include typography-style($heading-font, 24px, $semibold-weight);
   }
 }
+
+.button--link {
+  @include typography-style($heading-font, 16px, $semibold-weight);
+  text-decoration: underline;
+
+  &.MuiButton-root:hover {
+    background-color: transparent;
+  }
+}

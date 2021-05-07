@@ -25,7 +25,3 @@ body,
 p {
   @include typography-style($body-font, 20px, $regular-weight);
 }
-
-.link-cta {
-  @include typography-style($heading-font, 16px, $semibold-weight);
-}
