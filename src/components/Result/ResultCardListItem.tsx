@@ -18,6 +18,10 @@ export const ResultCardListItem: React.FC<IMovie> = props => {
   };
 
   const isNominated = (movieId: string) => {
+    if (nominations.length >= 5) {
+      return true;
+    }
+
     return nominations.find(movie => movie.imdbID === movieId) ? true : false;
   };
 
