@@ -40,6 +40,7 @@ export const SearchBar = () => {
         <SearchIcon />
       </span>
       <input
+        id="search-input"
         className="search-bar--input"
         value={input}
         onChange={event => setInput(event.target.value)}
