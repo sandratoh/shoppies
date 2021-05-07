@@ -6,7 +6,6 @@ import SearchIcon from '@material-ui/icons/Search';
 
 // Stylesheet
 import './SearchBar.scss';
-import React from 'react';
 
 export const SearchBar = () => {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {

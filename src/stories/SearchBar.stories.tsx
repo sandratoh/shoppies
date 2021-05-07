@@ -1,6 +1,3 @@
-// Libraries
-import { action } from '@storybook/addon-actions';
-
 // Components
 import SearchBar from '../components/SearchBar';
 
