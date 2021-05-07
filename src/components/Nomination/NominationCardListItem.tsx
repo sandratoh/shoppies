@@ -1,5 +1,11 @@
+// Libraries
+import { useContext } from 'react';
+
 // Component
 import Button from '../Button';
+
+// Helper
+import { MovieContext } from '../../Provider/MovieDataProvider';
 
 // Stylesheet
 import './NominationCardListItem.scss';
@@ -10,8 +16,14 @@ interface IProps {
 }
 
 export const NominationCardListItem: React.FC<IProps> = props => {
-  const handleRemove = (): void => {
-    console.log('remove button clicked');
+  const { nominations, setNominations } = useContext(MovieContext);
+
+  const handleRemove = (movieTitle: string) => {
+    const filteredNominations = nominations.filter(
+      movie => movie.Title !== movieTitle
+    );
+
+    setNominations(filteredNominations);
   };
 
   return (
@@ -21,7 +33,7 @@ export const NominationCardListItem: React.FC<IProps> = props => {
         remove
         variant="outlined"
         color="secondary"
-        onClick={handleRemove}
+        onClick={() => handleRemove(props.title)}
       >
         Remove
       </Button>
