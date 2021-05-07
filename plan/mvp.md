@@ -6,7 +6,7 @@
 
 - [ ] **Result list** containing search result:
 
-  - [ ] result string
+  - [x] result string
   - [x] title
   - [x] year of release
   - [x] `Nominate` CTA
@@ -27,6 +27,7 @@
   - [ ] `Clear` CTA (stretch)
     - [x] clear all nominees from nomination list
     - [ ] alert/confirmation before clearing
+  - [ ] sliding/fixed card with scroll (stretch)
 
 ## Technical Requirements
 
