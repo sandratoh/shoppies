@@ -30,8 +30,10 @@ export const SearchBar: React.FC<{}> = () => {
       )
       .then(res => {
         const movieResult: IMovie[] = res.data.Search;
-        setSearchResult(movieResult);
-        setSearchKeyword(input);
+        if (movieResult) {
+          setSearchResult(movieResult);
+          setSearchKeyword(input);
+        }
       });
   };
 
