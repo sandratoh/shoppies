@@ -1,11 +1,21 @@
+// Libraries
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
+
+// Components
 import App from './components/App';
+
+// Helpers
+import MovieDataProvider from './Provider/MovieDataProvider';
+
+// Stylesheet
+import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <MovieDataProvider>
+      <App />
+    </MovieDataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -4,15 +4,15 @@ import NominationCardListItem from './NominationCardListItem';
 // Stylesheet
 import './NominationCardList.scss';
 
-interface IMovie {
-  Title: string;
-  Year: string;
-  imdbID: string;
-  Type: string;
-  Poster: string;
-}
+// interface IMovie {
+//   Title: string;
+//   Year: string;
+//   imdbID: string;
+//   Type: string;
+//   Poster: string;
+// }
 
-const userNominations: IMovie[] = [
+const userNominations = [
   {
     Title: 'The Avengers',
     Year: '2012',
