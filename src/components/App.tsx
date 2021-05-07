@@ -26,7 +26,7 @@ export const App: React.FC<{}> = () => {
           <h3>Movie title:</h3>
           <SearchBar />
         </div>
-        {nominations.length >= 5 && <Alert />}
+        <div className="App-alert">{nominations.length >= 5 && <Alert />}</div>
         <div className="App-cards">
           <ResultCard />
           <NominationCard />
