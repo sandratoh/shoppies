@@ -18,8 +18,6 @@
 
 .search-bar--input {
   @include height-width(95%, 100%);
-  @include round-corner('bottom', 'left', $round-corner--component);
-  @include round-corner('top', 'left', $round-corner--component);
   @include typography-style($body-font, 20px, $regular-weight);
   display: flex;
   border: none;

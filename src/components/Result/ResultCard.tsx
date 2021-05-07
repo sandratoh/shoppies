@@ -17,7 +17,8 @@ import './Result.scss';
 export const ResultCard = () => {
   const { searchResult } = useContext(MovieContext);
 
-  const searchCTA = searchResult.length !== 0 ? 'Search Again' : 'Search Now';
+  const searchCTA =
+    searchResult && searchResult.length !== 0 ? 'Search Again' : 'Search Now';
 
   const handleClick = () => {
     document.getElementById('search-input')?.focus();
