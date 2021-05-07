@@ -10,9 +10,15 @@
   border-radius: $round-corner--bar;
 }
 
+.search-bar--icon {
+  margin: 16px;
+  color: $black;
+  display: flex;
+}
+
 .search-bar--input {
-  @include height-width(100%, 100%);
-  @include typography-style($body-font, 20, $regular-weight);
+  @include height-width(95%, 100%);
+  @include typography-style($body-font, 20px, $regular-weight);
   display: flex;
   border: none;
   border-top-left-radius: $round-corner--component;
