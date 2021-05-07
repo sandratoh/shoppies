@@ -1,11 +1,15 @@
 // Libraries
 import { useState } from 'react';
+import axios from 'axios';
 
 // Component
 import SearchButton from './SearchButton';
 
 // Material UI Component
 import SearchIcon from '@material-ui/icons/Search';
+
+// Helper
+import { IMovie } from '../Provider/MovieDataProvider';
 
 // Stylesheet
 import './SearchBar.scss';
@@ -18,7 +22,14 @@ export const SearchBar = () => {
   };
 
   const handleClick = () => {
-    console.log('search button clicked');
+    axios
+      .get(
+        `http://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+      )
+      .then(res => {
+        const movieResult: IMovie[] = res.data.Search;
+        console.log(movieResult);
+      });
   };
 
   return (
