@@ -13,7 +13,7 @@ interface IMovieContext {
   setNominations: React.Dispatch<React.SetStateAction<IMovie[]>>;
 }
 
-export const MovieContext = createContext<IMovieContext | null>(null);
+export const MovieContext = createContext<IMovieContext>({} as IMovieContext);
 
 export const MovieDataProvider: React.FC<{}> = props => {
   const testNominations = [
@@ -49,7 +49,7 @@ export const MovieDataProvider: React.FC<{}> = props => {
 
   const data = { nominations, setNominations };
 
-  console.log('data', data);
+  // console.log('data', data);
 
   return (
     <MovieContext.Provider value={data}>{props.children}</MovieContext.Provider>
