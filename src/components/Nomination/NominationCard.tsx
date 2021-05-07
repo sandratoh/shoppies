@@ -18,7 +18,11 @@ export const NominationCard = () => {
       </div>
       <NominationCardList />
       <div className="nomination-card--footer">
-        <Button variant="text" link>
+        <Button
+          variant="text"
+          link
+          onClick={() => console.log('clear all button clicked')}
+        >
           Clear All
         </Button>
       </div>

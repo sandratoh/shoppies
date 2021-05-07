@@ -37,7 +37,11 @@ export const Remove = () => {
 
 export const Disabled = () => {
   return (
-    <Button variant="contained" disabled>
+    <Button
+      variant="contained"
+      disabled
+      onClick={action('Should not be able to click')}
+    >
       Disabled
     </Button>
   );

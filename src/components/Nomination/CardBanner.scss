@@ -3,7 +3,7 @@
 
 .card-banner {
   @include height-width(56px, 88px);
-  @include round-corner('bottom', 'left', $round-corner--component);
+  @include round-corner('bottom', 'left', $round-corner--banner);
   @include round-corner('top', 'right', $round-corner--card);
   align-items: center;
   background-color: $secondary-color;

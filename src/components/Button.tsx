@@ -15,7 +15,7 @@ interface IProps {
   disabled?: boolean;
   link?: boolean;
   nominate?: boolean;
-  onClick?: () => void;
+  onClick: () => void;
   remove?: boolean;
   variant: 'text' | 'outlined' | 'contained';
 }
