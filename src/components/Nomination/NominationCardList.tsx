@@ -20,7 +20,7 @@ export const NominationCardList: React.FC<{}> = () => {
   const cardContentByNominations = (nominations: IMovie[]) => {
     return nominations.length !== 0
       ? movies
-      : 'Your nomination list is currently empty. Start by searching for your favourite movie!';
+      : 'Nominate your top 5 movies to The Shoppies!';
   };
 
   return (

@@ -15,9 +15,12 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 import './Result.scss';
 
 export const ResultCard: React.FC<{}> = () => {
-  const { searchResult, searchKeyword, setSearchResult } = useContext(
-    MovieContext
-  );
+  const {
+    searchResult,
+    searchKeyword,
+    setSearchResult,
+    setSearchKeyword,
+  } = useContext(MovieContext);
 
   const cardFooter = () => {
     const emptyResult = searchResult.length === 0;
@@ -48,7 +51,10 @@ export const ResultCard: React.FC<{}> = () => {
     document.getElementById('search-input')?.focus();
   };
 
-  const handleClear = () => setSearchResult([]);
+  const handleClear = () => {
+    setSearchKeyword('');
+    setSearchResult([]);
+  };
 
   const cardHeadingBySearch = (search: string) => {
     return search !== '' ? `Result for "${searchKeyword}"` : 'Result';

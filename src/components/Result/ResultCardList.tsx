@@ -24,7 +24,7 @@ export const ResultCardList: React.FC<{}> = () => {
 
     return result.length !== 0
       ? movies
-      : "You haven't searched for anything yet!";
+      : 'Start searching for your favourite movie!';
   };
 
   return (
