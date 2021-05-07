@@ -7,7 +7,7 @@
   @include height-width(36px, 120px);
 
   .MuiButton-label {
-    @include typography-style($heading-font, 16, $semibold-weight);
+    @include typography-style($heading-font, 14px, $semibold-weight);
   }
 }
 
@@ -16,6 +16,6 @@
   @include height-width(63px, 240px);
 
   .MuiButton-label {
-    @include typography-style($heading-font, 24, $semibold-weight);
+    @include typography-style($heading-font, 24px, $semibold-weight);
   }
 }

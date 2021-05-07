@@ -16,7 +16,6 @@ interface IProps {
   nominate?: boolean;
   onClick?: () => void;
   remove?: boolean;
-  style?: false | { fontSize: string } | undefined;
   variant: 'text' | 'outlined' | 'contained';
 }
 
@@ -35,7 +34,6 @@ export const CTAButton: React.FC<IProps> = props => {
       disabled={props.disabled}
       variant={props.variant}
       onClick={props.onClick}
-      style={(props.cancel || props.confirm) && { fontSize: '24px' }}
     >
       {props.children}
     </Button>

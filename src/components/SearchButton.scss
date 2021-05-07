@@ -1,0 +1,22 @@
+@import '../styles/mixins.scss';
+@import '../styles/typography.scss';
+@import '../styles/variables.scss';
+
+$round-button-corner: 40px;
+
+.search-button {
+  @include height-width(80px, 180px);
+  @include typography-style($heading-font, 24px, $semibold-weight);
+
+  border: none;
+  border-top-right-radius: $round-button-corner;
+  border-bottom-right-radius: $round-button-corner;
+  background-color: $secondary-color;
+  color: $white;
+  text-transform: uppercase;
+  transition: all 0.1s ease-out;
+
+  &:hover {
+    background-color: $secondary-color--hover;
+  }
+}
