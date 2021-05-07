@@ -23,7 +23,17 @@ export const NominationCardList = () => {
     );
   });
 
-  return <section className="nomination-card--list">{movies}</section>;
+  const cardContentByNominations = (nominations: IMovie[]) => {
+    return nominations.length !== 0
+      ? movies
+      : 'Your nomination list is currently empty. Start by searching for your favourite movie!';
+  };
+
+  return (
+    <section className="nomination-card--list">
+      {cardContentByNominations(nominations)}
+    </section>
+  );
 };
 
 export default NominationCardList;
