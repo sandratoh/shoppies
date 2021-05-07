@@ -9,3 +9,7 @@ export default {
 export const Default = () => {
   return <CardBanner currentNominees={0}></CardBanner>;
 };
+
+export const Full = () => {
+  return <CardBanner currentNominees={5}></CardBanner>;
+};

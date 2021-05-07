@@ -1,5 +1,5 @@
 // Libraries
-import classnames from 'classnames';
+import classNames from 'classnames';
 
 // Material UI Component
 import Button from '@material-ui/core/Button';
@@ -20,7 +20,7 @@ interface IProps {
 }
 
 export const CTAButton: React.FC<IProps> = props => {
-  const buttonClass = classnames('button', {
+  const buttonClass = classNames('button', {
     'button--nominate': props.nominate,
     'button--remove': props.remove,
     'button--cancel': props.cancel,

@@ -1,3 +1,6 @@
+// Libraries
+import classNames from 'classnames';
+
 // Stylesheet
 import './CardBanner.scss';
 
@@ -6,8 +9,12 @@ interface IProps {
 }
 
 export const CardBanner: React.FC<IProps> = props => {
+  const bannerClasses = classNames('card-banner', {
+    'card-banner--filled': props.currentNominees === 5,
+  });
+
   return (
-    <section className="card-banner">
+    <section className={bannerClasses}>
       <h4>{props.currentNominees}/5</h4>
     </section>
   );
