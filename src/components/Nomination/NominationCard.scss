@@ -1,7 +1,6 @@
 .nomination-card {
   min-width: 480px;
   width: 45%;
-  // border: solid pink;
 
   &:hover {
     cursor: pointer;
@@ -16,4 +15,11 @@
   h2 {
     padding: 32px 40px;
   }
+}
+
+.nomination-card--footer {
+  margin: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }

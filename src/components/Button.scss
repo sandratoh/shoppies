@@ -1,5 +1,6 @@
 @import '../styles/mixins.scss';
 @import '../styles/typography.scss';
+@import '../styles/variables.scss';
 
 .button,
 .button--nominate,
@@ -22,9 +23,16 @@
 
 .button--link {
   @include typography-style($heading-font, 16px, $semibold-weight);
-  text-decoration: underline;
 
-  &.MuiButton-root:hover {
-    background-color: transparent;
+  &.MuiButton-root {
+    text-decoration: underline;
+    color: $grey;
+    transition: all 0.1s ease-out;
+
+    &:hover {
+      background-color: transparent;
+      text-decoration: underline;
+      color: $primary-color;
+    }
   }
 }

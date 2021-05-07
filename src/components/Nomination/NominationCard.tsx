@@ -17,9 +17,11 @@ export const NominationCard = () => {
         <CardBanner currentNominees={0} />
       </div>
       <NominationCardList />
-      <Button variant="text" link>
-        Clear All
-      </Button>
+      <div className="nomination-card--footer">
+        <Button variant="text" link>
+          Clear All
+        </Button>
+      </div>
     </Card>
   );
 };
