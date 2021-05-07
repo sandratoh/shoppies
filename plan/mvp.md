@@ -14,12 +14,12 @@
     - [x] disabled - if result already nominated
     - [x] disabled - if nomination list is full (stretch)
 
-- [ ] **Nomination list**:
+- [x] **Nomination list**:
   - [x] display list of films already nominated
   - [x] maximum 5 nominees
-  - [ ] when max. nominees reached:
+  - [x] when max. nominees reached:
     - [x] banner display
-    - [ ] user notification/alert (stretch)
+    - [x] user notification/alert (stretch)
     - [x] disable all `Nominate` CTA (stretch) and/or alert message when clicked
   - [ ] `Remove` CTA
     - [x] remove nominee from nomination list
