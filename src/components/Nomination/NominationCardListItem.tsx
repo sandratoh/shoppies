@@ -5,18 +5,12 @@ import { useContext } from 'react';
 import Button from '../Button';
 
 // Helper
-import { MovieContext } from '../../Provider/MovieDataProvider';
+import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 
 // Stylesheet
 import './Nomination.scss';
 
-interface IProps {
-  title: string;
-  year: number;
-  id: string;
-}
-
-export const NominationCardListItem: React.FC<IProps> = props => {
+export const NominationCardListItem: React.FC<IMovie> = props => {
   const { nominations, setNominations } = useContext(MovieContext);
 
   const handleRemove = (movieId: string) => {
@@ -29,12 +23,12 @@ export const NominationCardListItem: React.FC<IProps> = props => {
 
   return (
     <section className="nomination-card--item">
-      <p>{`${props.title} (${props.year})`}</p>
+      <p>{`${props.Title} (${props.Year})`}</p>
       <Button
         remove
         variant="outlined"
         color="secondary"
-        onClick={() => handleRemove(props.id)}
+        onClick={() => handleRemove(props.imdbID)}
       >
         Remove
       </Button>

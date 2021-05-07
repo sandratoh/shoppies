@@ -14,14 +14,7 @@ export const NominationCardList = () => {
   const { nominations } = useContext(MovieContext);
 
   const movies = nominations.map((movie: IMovie) => {
-    return (
-      <NominationCardListItem
-        key={movie.imdbID}
-        id={movie.imdbID}
-        title={movie.Title}
-        year={parseInt(movie.Year)}
-      />
-    );
+    return <NominationCardListItem {...movie} key={movie.imdbID} />;
   });
 
   const cardContentByNominations = (nominations: IMovie[]) => {
