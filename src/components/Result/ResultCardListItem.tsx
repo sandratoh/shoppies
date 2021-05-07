@@ -11,16 +11,21 @@ import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 import './Result.scss';
 
 export const ResultCardListItem: React.FC<IMovie> = props => {
-  const { setNominations } = useContext(MovieContext);
+  const { nominations, setNominations } = useContext(MovieContext);
 
   const handleNominate = (movie: IMovie) => {
     setNominations(prev => [...prev, movie]);
+  };
+
+  const isNominated = (movieId: string) => {
+    return nominations.find(movie => movie.imdbID === movieId) ? true : false;
   };
 
   return (
     <section className="result-card--item">
       <p>{`${props.Title} (${props.Year})`}</p>
       <Button
+        disabled={isNominated(props.imdbID)}
         nominate
         variant="contained"
         color="primary"
