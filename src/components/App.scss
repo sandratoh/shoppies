@@ -7,7 +7,7 @@
   align-items: center;
 }
 
-header {
+.App-header {
   @include height-width(160px, 100vw);
   align-items: center;
   background-color: $primary-color;
@@ -23,13 +23,11 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  // align-items: center;
-  justify-content: center;
   width: 80%;
-  border: solid blue;
+  // border: solid blue;
 }
 
 .App-search {
-  border: solid red;
+  margin: 40px 0;
   width: 100%;
 }

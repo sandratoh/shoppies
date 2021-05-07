@@ -9,9 +9,11 @@ import './NominationCard.scss';
 
 export const NominationCard = () => {
   return (
-    <Card>
-      <h2>Nominations</h2>
-      <CardBanner currentNominees={0} />
+    <Card className="nomination-card">
+      <div className="nomination-card--header">
+        <h2>Nominations</h2>
+        <CardBanner currentNominees={0} />
+      </div>
     </Card>
   );
 };
