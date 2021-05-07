@@ -4,6 +4,7 @@ import SearchBar from './SearchBar';
 // Stylesheet
 import './App.scss';
 import NominationCard from './Nomination/NominationCard';
+import ResultCard from './Result/ResultCard';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <h3>Movie title:</h3>
           <SearchBar />
         </div>
+        <ResultCard />
         <NominationCard />
       </main>
     </div>

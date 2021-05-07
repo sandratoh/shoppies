@@ -1,0 +1,37 @@
+.result-card {
+  min-width: 480px;
+  width: 45%;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(95%);
+  }
+}
+
+.result-card--header {
+  display: flex;
+  justify-content: space-between;
+
+  h2 {
+    padding: 32px 40px;
+  }
+}
+
+.result-card--footer {
+  margin: 16px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.result-card--list {
+  margin: 0 40px 40px;
+}
+
+.result-card--item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 24px 0;
+}
