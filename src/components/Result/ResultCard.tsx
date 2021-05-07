@@ -24,10 +24,14 @@ export const ResultCard = () => {
     document.getElementById('search-input')?.focus();
   };
 
+  const cardHeadingBySearch = (search: string) => {
+    return search !== '' ? `Result for "${searchKeyword}"` : 'Result';
+  };
+
   return (
     <Card className="result-card">
       <div className="result-card--header">
-        <h2>Result for "{searchKeyword}"</h2>
+        <h2>{cardHeadingBySearch(searchKeyword)}</h2>
       </div>
       <ResultCardList />
       <div className="result-card--footer">
