@@ -8,3 +8,7 @@
   height: $height;
   width: $width;
 }
+
+@mixin round-corner($vertical, $horizontal, $unit) {
+  border-#{$vertical}-#{$horizontal}-radius: $unit;
+}
