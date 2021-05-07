@@ -2,7 +2,7 @@
 import './SearchButton.scss';
 
 interface IProps {
-  onClick: () => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export const SearchButton: React.FC<IProps> = props => {

@@ -6,14 +6,19 @@ import SearchIcon from '@material-ui/icons/Search';
 
 // Stylesheet
 import './SearchBar.scss';
+import React from 'react';
 
 export const SearchBar = () => {
-  const handleClick = (): void => {
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  };
+
+  const handleClick = () => {
     console.log('search button clicked');
   };
 
   return (
-    <form className="search-bar">
+    <form className="search-bar" onSubmit={handleSubmit}>
       <span className="search-bar--icon">
         <SearchIcon />
       </span>
