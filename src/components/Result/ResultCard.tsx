@@ -15,7 +15,7 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 import './Result.scss';
 
 export const ResultCard = () => {
-  const { searchResult } = useContext(MovieContext);
+  const { searchResult, searchKeyword } = useContext(MovieContext);
 
   const searchCTA =
     searchResult && searchResult.length !== 0 ? 'Search Again' : 'Search Now';
@@ -27,7 +27,7 @@ export const ResultCard = () => {
   return (
     <Card className="result-card">
       <div className="result-card--header">
-        <h2>Result</h2>
+        <h2>Result for "{searchKeyword}"</h2>
       </div>
       <ResultCardList />
       <div className="result-card--footer">

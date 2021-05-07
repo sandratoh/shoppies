@@ -15,7 +15,7 @@ import { IMovie, MovieContext } from '../Provider/MovieDataProvider';
 import './SearchBar.scss';
 
 export const SearchBar = () => {
-  const { setSearchResult } = useContext(MovieContext);
+  const { setSearchResult, setSearchKeyword } = useContext(MovieContext);
 
   const [input, setInput] = useState('');
 
@@ -31,6 +31,7 @@ export const SearchBar = () => {
       .then(res => {
         const movieResult: IMovie[] = res.data.Search;
         setSearchResult(movieResult);
+        setSearchKeyword(input);
       });
   };
 
