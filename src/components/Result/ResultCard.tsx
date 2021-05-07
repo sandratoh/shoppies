@@ -14,7 +14,7 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 // Stylesheet
 import './Result.scss';
 
-export const ResultCard = () => {
+export const ResultCard: React.FC<{}> = () => {
   const { searchResult, searchKeyword } = useContext(MovieContext);
 
   const searchCTA =

@@ -15,7 +15,7 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 // Stylesheet
 import './Nomination.scss';
 
-export const NominationCard = () => {
+export const NominationCard: React.FC<{}> = () => {
   const { nominations, setNominations } = useContext(MovieContext);
 
   const handleClear = () => {

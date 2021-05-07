@@ -10,7 +10,7 @@ import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 // Stylesheet
 import './Nomination.scss';
 
-export const NominationCardList = () => {
+export const NominationCardList: React.FC<{}> = () => {
   const { nominations } = useContext(MovieContext);
 
   const movies = nominations.map((movie: IMovie) => {

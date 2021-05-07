@@ -6,7 +6,7 @@ import './App.scss';
 import NominationCard from './Nomination/NominationCard';
 import ResultCard from './Result/ResultCard';
 
-function App() {
+export const App: React.FC<{}> = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +24,6 @@ function App() {
       </main>
     </div>
   );
-}
+};
 
 export default App;

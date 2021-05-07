@@ -14,7 +14,7 @@ import { IMovie, MovieContext } from '../Provider/MovieDataProvider';
 // Stylesheet
 import './SearchBar.scss';
 
-export const SearchBar = () => {
+export const SearchBar: React.FC<{}> = () => {
   const { setSearchResult, setSearchKeyword } = useContext(MovieContext);
 
   const [input, setInput] = useState('');

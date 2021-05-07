@@ -10,7 +10,7 @@ import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 // Stylesheet
 import './Result.scss';
 
-export const ResultCardList = () => {
+export const ResultCardList: React.FC<{}> = () => {
   const { searchResult } = useContext(MovieContext);
 
   const cardContentByResult = (result: IMovie[]) => {
