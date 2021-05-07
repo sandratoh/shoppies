@@ -22,27 +22,31 @@ export const ResultCard: React.FC<{}> = () => {
     setSearchKeyword,
   } = useContext(MovieContext);
 
-  const cardFooter = () => {
+  const cardFooter = (): JSX.Element => {
     const emptyResult = searchResult.length === 0;
 
-    const searchCTA = emptyResult ? 'Search Now' : 'Search Again';
+    const searchString = emptyResult ? 'Search Now' : 'Search Again';
+
+    const searchCTA = (
+      <Button variant="text" link onClick={handleSearch}>
+        {searchString}
+      </Button>
+    );
+
+    const clearCTA = (
+      <Button variant="text" link onClick={handleClear}>
+        Clear Result
+      </Button>
+    );
 
     if (emptyResult) {
-      return (
-        <Button variant="text" link onClick={handleSearch}>
-          {searchCTA}
-        </Button>
-      );
+      return searchCTA;
     }
 
     return (
       <>
-        <Button variant="text" link onClick={handleClear}>
-          Clear Result
-        </Button>
-        <Button variant="text" link onClick={handleSearch}>
-          {searchCTA}
-        </Button>
+        {clearCTA}
+        {searchCTA}
       </>
     );
   };
