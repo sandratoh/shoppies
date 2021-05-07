@@ -1,0 +1,24 @@
+@import '../styles/mixins.scss';
+@import '../styles/typography.scss';
+@import '../styles/variables.scss';
+
+.search-bar {
+  @include height-width(80px, 100%);
+  align-items: center;
+  display: flex;
+  border: solid $secondary-color;
+  border-radius: $round-corner--bar;
+}
+
+.search-bar--input {
+  @include height-width(100%, 100%);
+  @include typography-style($body-font, 20, $regular-weight);
+  display: flex;
+  border: none;
+  border-top-left-radius: $round-corner--component;
+  border-bottom-left-radius: $round-corner--component;
+
+  &:focus {
+    outline: none;
+  }
+}
