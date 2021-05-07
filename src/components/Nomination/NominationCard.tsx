@@ -16,7 +16,7 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 import './NominationCard.scss';
 
 export const NominationCard = () => {
-  const { setNominations } = useContext(MovieContext);
+  const { nominations, setNominations } = useContext(MovieContext);
 
   const handleClear = () => {
     setNominations([]);
@@ -26,7 +26,7 @@ export const NominationCard = () => {
     <Card className="nomination-card">
       <div className="nomination-card--header">
         <h2>Nominations</h2>
-        <CardBanner currentNominees={0} />
+        <CardBanner currentNominees={nominations.length} />
       </div>
       <NominationCardList />
       <div className="nomination-card--footer">
