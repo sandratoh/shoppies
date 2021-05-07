@@ -18,11 +18,11 @@ export const ResultCardListItem: React.FC<IMovie> = props => {
   };
 
   const isNominated = (movieId: string) => {
-    if (nominations.length >= 5) {
-      return true;
-    }
+    const fullList = nominations.length >= 5;
 
-    return nominations.find(movie => movie.imdbID === movieId) ? true : false;
+    const findFromList = nominations.find(movie => movie.imdbID === movieId);
+
+    return fullList || findFromList ? true : false;
   };
 
   return (
