@@ -8,7 +8,7 @@ import Button from '../Button';
 import { MovieContext } from '../../Provider/MovieDataProvider';
 
 // Stylesheet
-import './NominationCardListItem.scss';
+import './Nomination.scss';
 
 interface IProps {
   title: string;

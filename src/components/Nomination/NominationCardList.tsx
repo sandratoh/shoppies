@@ -8,7 +8,7 @@ import NominationCardListItem from './NominationCardListItem';
 import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 
 // Stylesheet
-import './NominationCardList.scss';
+import './Nomination.scss';
 
 export const NominationCardList = () => {
   const { nominations } = useContext(MovieContext);

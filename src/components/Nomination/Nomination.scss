@@ -23,3 +23,15 @@
   display: flex;
   justify-content: center;
 }
+
+.nomination-card--list {
+  margin: 0 40px 40px;
+}
+
+.nomination-card--item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 24px 0;
+}

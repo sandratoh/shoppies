@@ -13,7 +13,7 @@ import Card from '@material-ui/core/Card';
 import { MovieContext } from '../../Provider/MovieDataProvider';
 
 // Stylesheet
-import './NominationCard.scss';
+import './Nomination.scss';
 
 export const NominationCard = () => {
   const { nominations, setNominations } = useContext(MovieContext);
