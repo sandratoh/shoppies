@@ -2,29 +2,30 @@
 
 ## Features
 
-- [ ] **Search bar** to enter movie title
+- [x] **Search bar** to enter movie title
 
 - [ ] **Result list** containing search result:
 
-  - [ ] title
-  - [ ] year of release
-  - [ ] `Nominate` CTA
-    - [ ] active - add to nomination list
+  - [ ] result string
+  - [x] title
+  - [x] year of release
+  - [x] `Nominate` CTA
+    - [x] active - add to nomination list
     - [ ] disabled - if result already nominated
     - [ ] disabled - if nomination list is full (stretch)
 
 - [ ] **Nomination list**:
-  - [ ] display list of films already nominated
-  - [ ] maximum 5 nominees
+  - [x] display list of films already nominated
+  - [x] maximum 5 nominees
   - [ ] when max. nominees reached:
-    - [ ] banner display
+    - [x] banner display
     - [ ] user notification/alert (stretch)
     - [ ] disable all `Nominate` CTA (stretch) and/or alert message when clicked
   - [ ] `Remove` CTA
-    - [ ] remove nominee from nomination list
+    - [x] remove nominee from nomination list
     - [ ] alert/confirmation before removing (stretch)
   - [ ] `Clear` CTA (stretch)
-    - [ ] clear all nominees from nomination list
+    - [x] clear all nominees from nomination list
     - [ ] alert/confirmation before clearing
 
 ## Technical Requirements
