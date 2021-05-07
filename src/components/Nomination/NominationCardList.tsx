@@ -43,6 +43,7 @@ export const NominationCardList = () => {
   const nominations = userNominations.map(nomination => {
     return (
       <NominationCardListItem
+        key={nomination.imdbID}
         title={nomination.Title}
         year={parseInt(nomination.Year)}
       />
