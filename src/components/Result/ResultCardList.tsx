@@ -17,7 +17,17 @@ export const ResultCardList = () => {
     return <ResultCardListItem {...movie} key={movie.imdbID} />;
   });
 
-  return <section className="result-card--list">{movies}</section>;
+  const cardContentByResult = (result: IMovie[]) => {
+    return result.length !== 0
+      ? movies
+      : "You haven't searched for anything yet!";
+  };
+
+  return (
+    <section className="result-card--list">
+      {cardContentByResult(searchResult)}
+    </section>
+  );
 };
 
 export default ResultCardList;
