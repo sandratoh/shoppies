@@ -10,7 +10,7 @@ interface IProps {
 
 export const CardBanner: React.FC<IProps> = props => {
   const bannerClasses = classNames('card-banner', {
-    'card-banner--filled': props.currentNominees === 5,
+    'card-banner--full': props.currentNominees === 5,
   });
 
   return (
