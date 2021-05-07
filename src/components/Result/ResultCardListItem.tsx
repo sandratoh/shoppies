@@ -11,13 +11,11 @@ import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
 import './Result.scss';
 
 export const ResultCardListItem: React.FC<IMovie> = props => {
-  const { nominations, setNominations } = useContext(MovieContext);
+  const { setNominations } = useContext(MovieContext);
 
   const handleNominate = (movie: IMovie) => {
     setNominations(prev => [...prev, movie]);
   };
-
-  console.log('nominations in list item', nominations);
 
   return (
     <section className="result-card--item">

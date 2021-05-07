@@ -13,11 +13,15 @@ import './Result.scss';
 export const ResultCardList = () => {
   const { searchResult } = useContext(MovieContext);
 
-  const movies = searchResult.map((movie: IMovie) => {
-    return <ResultCardListItem {...movie} key={movie.imdbID} />;
-  });
-
   const cardContentByResult = (result: IMovie[]) => {
+    if (result === undefined) {
+      return 'Sorry, no data found!';
+    }
+
+    const movies = searchResult.map((movie: IMovie) => {
+      return <ResultCardListItem {...movie} key={movie.imdbID} />;
+    });
+
     return result.length !== 0
       ? movies
       : "You haven't searched for anything yet!";
