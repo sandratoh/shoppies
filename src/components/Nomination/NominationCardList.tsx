@@ -17,6 +17,7 @@ export const NominationCardList = () => {
     return (
       <NominationCardListItem
         key={movie.imdbID}
+        id={movie.imdbID}
         title={movie.Title}
         year={parseInt(movie.Year)}
       />

@@ -13,14 +13,15 @@ import './NominationCardListItem.scss';
 interface IProps {
   title: string;
   year: number;
+  id: string;
 }
 
 export const NominationCardListItem: React.FC<IProps> = props => {
   const { nominations, setNominations } = useContext(MovieContext);
 
-  const handleRemove = (movieTitle: string) => {
+  const handleRemove = (movieId: string) => {
     const filteredNominations = nominations.filter(
-      movie => movie.Title !== movieTitle
+      movie => movie.imdbID !== movieId
     );
 
     setNominations(filteredNominations);
@@ -33,7 +34,7 @@ export const NominationCardListItem: React.FC<IProps> = props => {
         remove
         variant="outlined"
         color="secondary"
-        onClick={() => handleRemove(props.title)}
+        onClick={() => handleRemove(props.id)}
       >
         Remove
       </Button>
