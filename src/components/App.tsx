@@ -17,8 +17,10 @@ function App() {
           <h3>Movie title:</h3>
           <SearchBar />
         </div>
-        <ResultCard />
-        <NominationCard />
+        <div className="App-cards">
+          <ResultCard />
+          <NominationCard />
+        </div>
       </main>
     </div>
   );

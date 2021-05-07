@@ -24,10 +24,14 @@ main {
   display: flex;
   flex-direction: column;
   width: 80%;
-  // border: solid blue;
 }
 
 .App-search {
   margin: 40px 0;
   width: 100%;
+}
+
+.App-cards {
+  display: flex;
+  justify-content: space-between;
 }

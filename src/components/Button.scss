@@ -22,6 +22,7 @@
 }
 
 .button--link {
+  width: auto;
   @include typography-style($heading-font, 16px, $semibold-weight);
 
   &.MuiButton-root {

@@ -23,5 +23,5 @@ h4 {
 
 body,
 p {
-  @include typography-style($body-font, 20px, $regular-weight);
+  @include typography-style($body-font, 18px, $regular-weight);
 }
