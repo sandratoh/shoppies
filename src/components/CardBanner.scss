@@ -1,0 +1,15 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+.card-banner {
+  @include height-width(56px, 88px);
+  align-items: center;
+  background-color: $secondary-color;
+  border-top-right-radius: $round-corner--card;
+  border-bottom-left-radius: $round-corner--component;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  letter-spacing: 0.2rem;
+}

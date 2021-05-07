@@ -6,26 +6,26 @@ $semibold-weight: 600;
 $bold-weight: 700;
 
 h1 {
-  @include typography-style($heading-font, 64, $semibold-weight);
+  @include typography-style($heading-font, 64px, $semibold-weight);
 }
 
 h2 {
-  @include typography-style($heading-font, 28, $bold-weight);
+  @include typography-style($heading-font, 28px, $bold-weight);
 }
 
 h3 {
-  @include typography-style($heading-font, 24, $semibold-weight);
+  @include typography-style($heading-font, 24px, $semibold-weight);
 }
 
 h4 {
-  @include typography-style($body-font, 24, $semibold-weight);
+  @include typography-style($body-font, 24px, $semibold-weight);
 }
 
 body,
 p {
-  @include typography-style($body-font, 20, $regular-weight);
+  @include typography-style($body-font, 20px, $regular-weight);
 }
 
 .link-cta {
-  @include typography-style($heading-font, 16, $semibold-weight);
+  @include typography-style($heading-font, 16px, $semibold-weight);
 }

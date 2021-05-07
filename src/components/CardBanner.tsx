@@ -6,7 +6,11 @@ interface IProps {
 }
 
 export const CardBanner: React.FC<IProps> = props => {
-  return <section className="card-banner">{props.currentNominees}/5</section>;
+  return (
+    <section className="card-banner">
+      <h4>{props.currentNominees}/5</h4>
+    </section>
+  );
 };
 
 export default CardBanner;
