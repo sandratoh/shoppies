@@ -1,5 +1,5 @@
 // Libraries
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
 
 // Component
@@ -9,12 +9,14 @@ import SearchButton from './SearchButton';
 import SearchIcon from '@material-ui/icons/Search';
 
 // Helper
-import { IMovie } from '../Provider/MovieDataProvider';
+import { IMovie, MovieContext } from '../Provider/MovieDataProvider';
 
 // Stylesheet
 import './SearchBar.scss';
 
 export const SearchBar = () => {
+  const { setSearchResult } = useContext(MovieContext);
+
   const [input, setInput] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -28,7 +30,7 @@ export const SearchBar = () => {
       )
       .then(res => {
         const movieResult: IMovie[] = res.data.Search;
-        console.log(movieResult);
+        setSearchResult(movieResult);
       });
   };
 
