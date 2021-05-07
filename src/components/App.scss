@@ -1,0 +1,35 @@
+@import '../styles/mixins.scss';
+@import '../styles/variables.scss';
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  @include height-width(160px, 100vw);
+  align-items: center;
+  background-color: $primary-color;
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    color: $white;
+    width: 80%;
+  }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  width: 80%;
+  border: solid blue;
+}
+
+.App-search {
+  border: solid red;
+  width: 100%;
+}
