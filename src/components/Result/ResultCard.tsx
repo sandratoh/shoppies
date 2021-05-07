@@ -15,14 +15,18 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 import './Result.scss';
 
 export const ResultCard: React.FC<{}> = () => {
-  const { searchResult, searchKeyword } = useContext(MovieContext);
+  const { searchResult, searchKeyword, setSearchResult } = useContext(
+    MovieContext
+  );
 
   const searchCTA =
     searchResult && searchResult.length !== 0 ? 'Search Again' : 'Search Now';
 
-  const handleClick = () => {
+  const handleSearch = () => {
     document.getElementById('search-input')?.focus();
   };
+
+  const handleClear = () => setSearchResult([]);
 
   const cardHeadingBySearch = (search: string) => {
     return search !== '' ? `Result for "${searchKeyword}"` : 'Result';
@@ -35,7 +39,10 @@ export const ResultCard: React.FC<{}> = () => {
       </div>
       <ResultCardList />
       <div className="result-card--footer">
-        <Button variant="text" link onClick={handleClick}>
+        <Button variant="text" link onClick={handleClear}>
+          Clear Result
+        </Button>
+        <Button variant="text" link onClick={handleSearch}>
           {searchCTA}
         </Button>
       </div>
