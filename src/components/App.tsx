@@ -33,19 +33,19 @@ export const App: React.FC<{}> = () => {
   return (
     <ThemeProvider theme={theme}>
       <div className="App">
-        <header className="App-header">
+        <header className="App--header">
           <h1>The Shoppies</h1>
         </header>
         <main>
-          <div className="App-search">
+          <div className="App--search">
             <h3>Movie title:</h3>
             <SearchBar />
           </div>
-          <div className="App-alert">
+          <div className="App--alert">
             {nominations.length >= 5 && <Alert />}
             <Confirm />
           </div>
-          <div className="App-cards">
+          <div className="App--cards">
             <ResultCard />
             <NominationCard />
           </div>
