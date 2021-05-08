@@ -27,8 +27,12 @@ export const SearchBar: React.FC<{}> = () => {
     event.target.select();
   };
 
+  const handleClickIcon = () => {
+    document.getElementById('search-input')?.focus();
+  };
+
   const handleClick = () => {
-    axios
+    return axios
       .get(
         `http://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       )
@@ -44,7 +48,7 @@ export const SearchBar: React.FC<{}> = () => {
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
       <span className="search-bar--icon">
-        <SearchIcon />
+        <SearchIcon onClick={handleClickIcon} />
       </span>
       <input
         id="search-input"
