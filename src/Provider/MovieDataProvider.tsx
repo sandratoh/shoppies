@@ -15,6 +15,8 @@ interface IMovieContext {
   setSearchResult: React.Dispatch<React.SetStateAction<IMovie[]>>;
   searchKeyword: string;
   setSearchKeyword: React.Dispatch<React.SetStateAction<string>>;
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 export const MovieContext = createContext<IMovieContext>({} as IMovieContext);
@@ -26,6 +28,8 @@ export const MovieDataProvider: React.FC<{}> = props => {
 
   const [searchKeyword, setSearchKeyword] = useState<string>('');
 
+  const [open, setOpen] = useState(false);
+
   const data = {
     nominations,
     setNominations,
@@ -33,6 +37,8 @@ export const MovieDataProvider: React.FC<{}> = props => {
     setSearchResult,
     searchKeyword,
     setSearchKeyword,
+    open,
+    setOpen,
   };
 
   // console.log('data', data);

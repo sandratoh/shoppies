@@ -16,10 +16,11 @@ import { MovieContext } from '../../Provider/MovieDataProvider';
 import './Nomination.scss';
 
 export const NominationCard: React.FC<{}> = () => {
-  const { nominations, setNominations } = useContext(MovieContext);
+  const { nominations, setNominations, setOpen } = useContext(MovieContext);
 
   const handleClear = () => {
     setNominations([]);
+    setOpen(true);
   };
 
   return (
