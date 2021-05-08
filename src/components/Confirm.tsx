@@ -12,13 +12,13 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 
 // Helpers
-import { MovieContext } from '../Provider/MovieDataProvider';
+import { AppContext } from '../Provider/DataProvider';
 
 // Stylesheet
 import './Confirm.scss';
 
 export const Confirm = () => {
-  const { nominations, open, setOpen } = useContext(MovieContext);
+  const { nominations, open, setOpen } = useContext(AppContext);
 
   const handleConfirm = () => {
     setOpen(false);

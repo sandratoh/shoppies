@@ -6,16 +6,16 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 
 // Helpers
-import MovieDataProvider from './Provider/MovieDataProvider';
+import DataProvider from './Provider/DataProvider';
 
 // Stylesheet
 import './index.scss';
 
 ReactDOM.render(
   <React.StrictMode>
-    <MovieDataProvider>
+    <DataProvider>
       <App />
-    </MovieDataProvider>
+    </DataProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

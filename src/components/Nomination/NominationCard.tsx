@@ -10,13 +10,13 @@ import NominationCardList from './NominationCardList';
 import Card from '@material-ui/core/Card';
 
 // Helper
-import { MovieContext } from '../../Provider/MovieDataProvider';
+import { AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
 import './Nomination.scss';
 
 export const NominationCard: React.FC<{}> = () => {
-  const { nominations, setNominations, setOpen } = useContext(MovieContext);
+  const { nominations, setNominations, setOpen } = useContext(AppContext);
 
   const handleClear = () => {
     setNominations([]);

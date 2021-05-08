@@ -5,13 +5,13 @@ import { useContext } from 'react';
 import NominationCardListItem from './NominationCardListItem';
 
 // Helpers
-import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
+import { IMovie, AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
 import './Nomination.scss';
 
 export const NominationCardList: React.FC<{}> = () => {
-  const { nominations } = useContext(MovieContext);
+  const { nominations } = useContext(AppContext);
 
   const movies = nominations.map((movie: IMovie) => {
     return <NominationCardListItem {...movie} key={movie.imdbID} />;

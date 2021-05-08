@@ -8,7 +8,7 @@ export interface IMovie {
   Poster: string;
 }
 
-interface IMovieContext {
+interface IContext {
   nominations: IMovie[];
   setNominations: React.Dispatch<React.SetStateAction<IMovie[]>>;
   searchResult: IMovie[];
@@ -19,9 +19,9 @@ interface IMovieContext {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-export const MovieContext = createContext<IMovieContext>({} as IMovieContext);
+export const AppContext = createContext<IContext>({} as IContext);
 
-export const MovieDataProvider: React.FC<{}> = props => {
+export const DataProvider: React.FC<{}> = props => {
   const [nominations, setNominations] = useState<IMovie[]>([]);
 
   const [searchResult, setSearchResult] = useState<IMovie[]>([]);
@@ -44,8 +44,8 @@ export const MovieDataProvider: React.FC<{}> = props => {
   // console.log('data', data);
 
   return (
-    <MovieContext.Provider value={data}>{props.children}</MovieContext.Provider>
+    <AppContext.Provider value={data}>{props.children}</AppContext.Provider>
   );
 };
 
-export default MovieDataProvider;
+export default DataProvider;

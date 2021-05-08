@@ -5,13 +5,13 @@ import { useContext } from 'react';
 import ResultCardListItem from './ResultCardListItem';
 
 // Helpers
-import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
+import { IMovie, AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
 import './Result.scss';
 
 export const ResultCardList: React.FC<{}> = () => {
-  const { searchResult } = useContext(MovieContext);
+  const { searchResult } = useContext(AppContext);
 
   const cardContentByResult = (result: IMovie[]) => {
     if (result === undefined) {

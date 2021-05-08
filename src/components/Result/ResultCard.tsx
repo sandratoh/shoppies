@@ -9,7 +9,7 @@ import ResultCardList from './ResultCardList';
 import Card from '@material-ui/core/Card';
 
 // Helper
-import { MovieContext } from '../../Provider/MovieDataProvider';
+import { AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
 import './Result.scss';
@@ -20,7 +20,7 @@ export const ResultCard: React.FC<{}> = () => {
     searchKeyword,
     setSearchResult,
     setSearchKeyword,
-  } = useContext(MovieContext);
+  } = useContext(AppContext);
 
   const cardFooter = (): JSX.Element => {
     const emptyResult = searchResult.length === 0;

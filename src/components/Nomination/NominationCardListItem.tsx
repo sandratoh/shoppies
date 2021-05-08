@@ -5,13 +5,13 @@ import { useContext } from 'react';
 import Button from '../Button';
 
 // Helper
-import { IMovie, MovieContext } from '../../Provider/MovieDataProvider';
+import { IMovie, AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
 import './Nomination.scss';
 
 export const NominationCardListItem: React.FC<IMovie> = props => {
-  const { nominations, setNominations } = useContext(MovieContext);
+  const { nominations, setNominations } = useContext(AppContext);
 
   const handleRemove = (movieId: string) => {
     const filteredNominations = nominations.filter(

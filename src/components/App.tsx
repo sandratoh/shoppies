@@ -9,13 +9,13 @@ import ResultCard from './Result/ResultCard';
 import SearchBar from './SearchBar';
 
 // Helpers
-import { MovieContext } from '../Provider/MovieDataProvider';
+import { AppContext } from '../Provider/DataProvider';
 
 // Stylesheet
 import './App.scss';
 
 export const App: React.FC<{}> = () => {
-  const { nominations } = useContext(MovieContext);
+  const { nominations } = useContext(AppContext);
 
   return (
     <div className="App">

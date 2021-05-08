@@ -9,13 +9,13 @@ import SearchButton from './SearchButton';
 import SearchIcon from '@material-ui/icons/Search';
 
 // Helper
-import { IMovie, MovieContext } from '../Provider/MovieDataProvider';
+import { IMovie, AppContext } from '../Provider/DataProvider';
 
 // Stylesheet
 import './SearchBar.scss';
 
 export const SearchBar: React.FC<{}> = () => {
-  const { setSearchResult, setSearchKeyword } = useContext(MovieContext);
+  const { setSearchResult, setSearchKeyword } = useContext(AppContext);
 
   const [input, setInput] = useState('');
 
