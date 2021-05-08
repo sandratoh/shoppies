@@ -12,10 +12,8 @@ import DataProvider from './Provider/DataProvider';
 import './index.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <DataProvider>
-      <App />
-    </DataProvider>
-  </React.StrictMode>,
+  <DataProvider>
+    <App />
+  </DataProvider>,
   document.getElementById('root')
 );

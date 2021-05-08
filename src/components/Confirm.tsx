@@ -32,7 +32,9 @@ export const Confirm = () => {
   const movieList =
     nominations.length > 0
       ? nominations.map(nomination => (
-          <li>{`${nomination.Title} (${nomination.Year})`}</li>
+          <li
+            key={nomination.imdbID}
+          >{`${nomination.Title} (${nomination.Year})`}</li>
         ))
       : 'There are no movies in your nomination list.';
 
