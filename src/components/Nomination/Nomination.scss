@@ -5,10 +5,11 @@
   position: -webkit-sticky;
   position: sticky;
   top: 24px;
+  filter: brightness(95%);
 
   &:hover {
     cursor: pointer;
-    filter: brightness(95%);
+    filter: brightness(100%);
   }
 }
 

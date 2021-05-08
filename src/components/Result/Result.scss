@@ -2,10 +2,11 @@
   min-width: 480px;
   width: 45%;
   height: fit-content;
+  filter: brightness(95%);
 
   &:hover {
     cursor: pointer;
-    filter: brightness(95%);
+    filter: brightness(100%);
   }
 }
 
