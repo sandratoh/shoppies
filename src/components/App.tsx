@@ -3,6 +3,7 @@ import { useContext } from 'react';
 
 // Components
 import Alert from './Alert';
+import Confirm from './Confirm';
 import NominationCard from './Nomination/NominationCard';
 import ResultCard from './Result/ResultCard';
 import SearchBar from './SearchBar';
@@ -26,7 +27,10 @@ export const App: React.FC<{}> = () => {
           <h3>Movie title:</h3>
           <SearchBar />
         </div>
-        <div className="App-alert">{nominations.length >= 5 && <Alert />}</div>
+        <div className="App-alert">
+          {nominations.length >= 5 && <Alert />}
+          <Confirm />
+        </div>
         <div className="App-cards">
           <ResultCard />
           <NominationCard />

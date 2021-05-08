@@ -19,13 +19,13 @@ import './Confirm.scss';
 
 export const Confirm = () => {
   const { nominations } = useContext(MovieContext);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleConfirm = () => {
+    setOpen(false);
   };
 
-  const handleClose = () => {
+  const handleCancel = () => {
     setOpen(false);
   };
 
@@ -64,8 +64,8 @@ export const Confirm = () => {
 
   return (
     <Dialog
-      open={true}
-      onClose={handleClose}
+      open={open}
+      onClose={handleCancel}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
       fullWidth
@@ -76,22 +76,14 @@ export const Confirm = () => {
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          {movieList}
+          <ol>{movieList}</ol>
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button
-          color="primary"
-          variant="text"
-          onClick={() => console.log('confirm button clicked')}
-        >
+        <Button color="primary" variant="text" onClick={handleConfirm}>
           Confirm
         </Button>
-        <Button
-          color="primary"
-          variant="text"
-          onClick={() => console.log('cancel button clicked')}
-        >
+        <Button color="primary" variant="text" onClick={handleCancel}>
           Cancel
         </Button>
       </DialogActions>
