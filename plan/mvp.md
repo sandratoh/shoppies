@@ -21,13 +21,13 @@
     - [x] banner display
     - [x] user notification/alert (stretch)
     - [x] disable all `Nominate` CTA (stretch) and/or alert message when clicked
-  - [ ] `Remove` CTA
+  - [x] `Remove` CTA
     - [x] remove nominee from nomination list
     - [ ] alert/confirmation before removing (stretch)
-  - [ ] `Clear` CTA (stretch)
+  - [x] `Clear` CTA (stretch)
     - [x] clear all nominees from nomination list
-    - [ ] alert/confirmation before clearing
-  - [ ] sliding/fixed card with scroll (stretch)
+    - [x] alert/confirmation before clearing
+  - [x] sliding/fixed card with scroll (stretch)
 
 ## Technical Requirements
 
