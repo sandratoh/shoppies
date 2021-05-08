@@ -29,11 +29,12 @@ export const Confirm = () => {
     setOpen(false);
   };
 
-  const movieList = nominations
-    ? nominations.map(nomination => (
-        <li>{`${nomination.Title} (${nomination.Year})`}</li>
-      ))
-    : 'There are no movies in your nomination list.';
+  const movieList =
+    nominations.length > 0
+      ? nominations.map(nomination => (
+          <li>{`${nomination.Title} (${nomination.Year})`}</li>
+        ))
+      : 'There are no movies in your nomination list.';
 
   return (
     <Dialog
