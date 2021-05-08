@@ -2,6 +2,9 @@
   min-width: 480px;
   width: 45%;
   height: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 24px;
 
   &:hover {
     cursor: pointer;
@@ -38,6 +41,6 @@
 
   p {
     width: 90%;
-    margin-right: 8px;
+    margin-right: 1.5rem;
   }
 }
