@@ -16,10 +16,9 @@ import { AppContext } from '../../Provider/DataProvider';
 import './Nomination.scss';
 
 export const NominationCard: React.FC<{}> = () => {
-  const { nominations, setNominations, setOpen } = useContext(AppContext);
+  const { nominations, setOpen } = useContext(AppContext);
 
   const handleClear = () => {
-    setNominations([]);
     setOpen(true);
   };
 

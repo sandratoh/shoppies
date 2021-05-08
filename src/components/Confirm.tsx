@@ -18,9 +18,10 @@ import { AppContext } from '../Provider/DataProvider';
 import './Confirm.scss';
 
 export const Confirm = () => {
-  const { nominations, open, setOpen } = useContext(AppContext);
+  const { nominations, setNominations, open, setOpen } = useContext(AppContext);
 
   const handleConfirm = () => {
+    setNominations([]);
     setOpen(false);
   };
 
