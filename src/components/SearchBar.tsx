@@ -23,6 +23,10 @@ export const SearchBar: React.FC<{}> = () => {
     event.preventDefault();
   };
 
+  const handleFocus = (event: any) => {
+    event.target.select();
+  };
+
   const handleClick = () => {
     axios
       .get(
@@ -47,6 +51,7 @@ export const SearchBar: React.FC<{}> = () => {
         className="search-bar--input"
         value={input}
         onChange={event => setInput(event.target.value)}
+        onFocus={handleFocus}
       ></input>
       <SearchButton onClick={handleClick} />
     </form>
