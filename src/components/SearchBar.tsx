@@ -41,6 +41,10 @@ export const SearchBar: React.FC<{}> = () => {
         if (movieResult) {
           setSearchResult(movieResult);
           setSearchKeyword(input);
+        } else {
+          alert(
+            "Sorry, we couldn't find any movies matching your search. Try again with a different title."
+          );
         }
       });
   };

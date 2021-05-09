@@ -14,17 +14,11 @@ export const ResultCardList: React.FC<{}> = () => {
   const { searchResult } = useContext(AppContext);
 
   const cardContentByResult = (result: IMovie[]) => {
-    if (result === undefined) {
-      return 'Sorry, no data found!';
-    }
-
     const movies = searchResult.map((movie: IMovie) => {
       return <ResultCardListItem {...movie} key={movie.imdbID} />;
     });
 
-    return result.length !== 0
-      ? movies
-      : 'Start searching for your favourite movie!';
+    return result.length !== 0 ? movies : 'Search for your favourite movie!';
   };
 
   return (
