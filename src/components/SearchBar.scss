@@ -18,7 +18,7 @@
 }
 
 .search-bar--input {
-  @include height-width(95%, 80%);
+  @include height-width(95%, 90%);
   @include typography-style($body-font, 20px, $regular-weight);
   display: flex;
   border: none;
