@@ -20,11 +20,13 @@ export const Confirm: React.FC<{}> = () => {
     setNominations,
     openConfirm,
     setOpenConfirm,
+    setSuccess,
   } = useContext(AppContext);
 
   const handleConfirm = () => {
     setNominations([]);
     setOpenConfirm(false);
+    setSuccess(false);
   };
 
   const handleCancel = () => setOpenConfirm(false);

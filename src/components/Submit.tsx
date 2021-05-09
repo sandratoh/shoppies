@@ -53,11 +53,11 @@ export const Submit: React.FC<{}> = () => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button color="primary" variant="text" onClick={handleSubmit}>
-          Submit
-        </Button>
         <Button color="primary" variant="text" onClick={handleCancel}>
           Cancel
+        </Button>
+        <Button color="primary" variant="text" onClick={handleSubmit}>
+          Submit
         </Button>
       </DialogActions>
     </Dialog>

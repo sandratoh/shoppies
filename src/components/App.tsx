@@ -32,7 +32,7 @@ const theme = createMuiTheme({
 });
 
 export const App: React.FC<{}> = () => {
-  const { nominations } = useContext(AppContext);
+  const { nominations, success } = useContext(AppContext);
 
   return (
     <ThemeProvider theme={theme}>
@@ -47,7 +47,7 @@ export const App: React.FC<{}> = () => {
             <SearchBar />
           </div>
           <div className="App--alert">
-            {nominations.length >= 5 && <Alert />}
+            {(nominations.length >= 5 || success) && <Alert />}
             <Confirm />
             <Submit />
           </div>

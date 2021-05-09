@@ -29,14 +29,16 @@ export const NominationCard: React.FC<{}> = () => {
         <CardBanner currentNominees={nominations.length} />
       </div>
       <NominationCardList />
-      <div className="nomination-card--footer">
-        <Button variant="text" link onClick={handleClear}>
-          Clear All
-        </Button>
-        <Button variant="text" link onClick={handleSubmit}>
-          Submit Nominations
-        </Button>
-      </div>
+      {nominations.length > 0 && (
+        <div className="nomination-card--footer">
+          <Button variant="text" link onClick={handleClear}>
+            Clear All
+          </Button>
+          <Button variant="text" link onClick={handleSubmit}>
+            Submit Nominations
+          </Button>
+        </div>
+      )}
     </Card>
   );
 };
