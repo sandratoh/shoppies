@@ -2,9 +2,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
-// Components
-import SearchButton from './SearchButton';
-
 // Material UI Components
 import SearchIcon from '@material-ui/icons/Search';
 
