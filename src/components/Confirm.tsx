@@ -14,9 +14,6 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 // Helpers
 import { AppContext } from '../Provider/DataProvider';
 
-// Stylesheet
-import './Confirm.scss';
-
 export const Confirm: React.FC<{}> = () => {
   const { nominations, setNominations, open, setOpen } = useContext(AppContext);
 
