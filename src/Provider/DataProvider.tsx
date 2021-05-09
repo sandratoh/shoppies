@@ -1,5 +1,5 @@
 // Libraries
-import React, { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState } from 'react';
 
 // Interfaces
 export interface IMovie {
@@ -58,7 +58,7 @@ export const DataProvider: React.FC<{}> = props => {
 
   useEffect(() => {
     setSuccess(false);
-  }, [nominations, searchResult]);
+  }, [nominations]);
 
   // Export states
   const data = {
