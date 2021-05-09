@@ -14,20 +14,17 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 // Helpers
 import { AppContext } from '../Provider/DataProvider';
 
-export const Confirm: React.FC<{}> = () => {
-  const {
-    nominations,
-    setNominations,
-    openConfirm,
-    setOpenConfirm,
-  } = useContext(AppContext);
+export const Submit: React.FC<{}> = () => {
+  const { nominations, setNominations, openSubmit, setOpenSubmit } = useContext(
+    AppContext
+  );
 
-  const handleConfirm = () => {
+  const handleSubmit = () => {
     setNominations([]);
-    setOpenConfirm(false);
+    setOpenSubmit(false);
   };
 
-  const handleCancel = () => setOpenConfirm(false);
+  const handleCancel = () => setOpenSubmit(false);
 
   const movieList =
     nominations.length > 0
@@ -40,7 +37,7 @@ export const Confirm: React.FC<{}> = () => {
 
   return (
     <Dialog
-      open={openConfirm}
+      open={openSubmit}
       onClose={handleCancel}
       aria-labelledby="alert-dialog-title"
       aria-describedby="alert-dialog-description"
@@ -48,7 +45,7 @@ export const Confirm: React.FC<{}> = () => {
       maxWidth="sm"
     >
       <DialogTitle id="alert-dialog-title">
-        <h4>Clear All from Nomination List?</h4>
+        <h4>Submit Nomination List?</h4>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
@@ -56,8 +53,8 @@ export const Confirm: React.FC<{}> = () => {
         </DialogContentText>
       </DialogContent>
       <DialogActions>
-        <Button color="primary" variant="text" onClick={handleConfirm}>
-          Confirm
+        <Button color="primary" variant="text" onClick={handleSubmit}>
+          Submit
         </Button>
         <Button color="primary" variant="text" onClick={handleCancel}>
           Cancel
@@ -67,4 +64,4 @@ export const Confirm: React.FC<{}> = () => {
   );
 };
 
-export default Confirm;
+export default Submit;

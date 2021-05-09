@@ -17,8 +17,10 @@ interface IContext {
   setSearchResult: React.Dispatch<React.SetStateAction<IMovie[]>>;
   searchKeyword: string;
   setSearchKeyword: React.Dispatch<React.SetStateAction<string>>;
-  open: boolean;
-  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  openConfirm: boolean;
+  setOpenConfirm: React.Dispatch<React.SetStateAction<boolean>>;
+  openSubmit: boolean;
+  setOpenSubmit: React.Dispatch<React.SetStateAction<boolean>>;
   noResult: boolean;
   setNoResult: React.Dispatch<React.SetStateAction<boolean>>;
   input: string;
@@ -36,7 +38,8 @@ export const DataProvider: React.FC<{}> = props => {
 
   const [searchKeyword, setSearchKeyword] = useState<string>('');
 
-  const [open, setOpen] = useState(false);
+  const [openConfirm, setOpenConfirm] = useState(false);
+  const [openSubmit, setOpenSubmit] = useState(false);
 
   const [noResult, setNoResult] = useState(true);
 
@@ -49,8 +52,10 @@ export const DataProvider: React.FC<{}> = props => {
     setSearchResult,
     searchKeyword,
     setSearchKeyword,
-    open,
-    setOpen,
+    openConfirm,
+    setOpenConfirm,
+    openSubmit,
+    setOpenSubmit,
     noResult,
     setNoResult,
     input,

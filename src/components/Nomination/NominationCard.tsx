@@ -16,9 +16,11 @@ import { AppContext } from '../../Provider/DataProvider';
 import './Nomination.scss';
 
 export const NominationCard: React.FC<{}> = () => {
-  const { nominations, setOpen } = useContext(AppContext);
+  const { nominations, setOpenConfirm, setOpenSubmit } = useContext(AppContext);
 
-  const handleClear = () => setOpen(true);
+  const handleClear = () => setOpenConfirm(true);
+
+  const handleSubmit = () => setOpenSubmit(true);
 
   return (
     <Card className="nomination-card">
@@ -30,6 +32,9 @@ export const NominationCard: React.FC<{}> = () => {
       <div className="nomination-card--footer">
         <Button variant="text" link onClick={handleClear}>
           Clear All
+        </Button>
+        <Button variant="text" link onClick={handleSubmit}>
+          Submit Nominations
         </Button>
       </div>
     </Card>

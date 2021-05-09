@@ -8,6 +8,7 @@ import Confirm from './Confirm';
 import NominationCard from './Nomination/NominationCard';
 import ResultCard from './Result/ResultCard';
 import SearchBar from './SearchBar';
+import Submit from './Submit';
 
 // Helpers
 import { AppContext } from '../Provider/DataProvider';
@@ -48,6 +49,7 @@ export const App: React.FC<{}> = () => {
           <div className="App--alert">
             {nominations.length >= 5 && <Alert />}
             <Confirm />
+            <Submit />
           </div>
           <div className="App--cards">
             <ResultCard />
