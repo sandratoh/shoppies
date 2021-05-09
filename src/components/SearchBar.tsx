@@ -3,6 +3,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Material UI Components
+import ClearIcon from '@material-ui/icons/Clear';
 import SearchIcon from '@material-ui/icons/Search';
 
 // Helpers
@@ -56,14 +57,16 @@ export const SearchBar: React.FC<{}> = () => {
     event.target.select();
   };
 
-  const handleClickIcon = () => {
+  const handleSearchIcon = () => {
     document.getElementById('search-input')?.focus();
   };
+
+  const handleClearIcon = () => setInput('');
 
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
       <span className="search-bar--icon">
-        <SearchIcon onClick={handleClickIcon} />
+        <SearchIcon onClick={handleSearchIcon} />
       </span>
       <input
         id="search-input"
@@ -73,6 +76,9 @@ export const SearchBar: React.FC<{}> = () => {
         onChange={event => setInput(event.target.value)}
         onFocus={handleFocus}
       ></input>
+      <span className="search-bar--icon">
+        <ClearIcon onClick={handleClearIcon} />
+      </span>
     </form>
   );
 };
