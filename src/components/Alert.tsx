@@ -10,7 +10,7 @@ import { AppContext } from '../Provider/DataProvider';
 export const AppAlert: React.FC<{}> = () => {
   const { success } = useContext(AppContext);
 
-  const alertType = success ? 'success' : 'error';
+  const alertType = success ? 'success' : 'warning';
 
   const alertMessage = success
     ? 'Thank you for your submission, your nomination has been received!'

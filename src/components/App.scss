@@ -5,7 +5,6 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-width: 560px;
 
   &--header {
     @include height-width(160px, 100vw);
@@ -13,7 +12,6 @@
     background-color: $primary-color;
     display: flex;
     justify-content: center;
-    min-width: 560px;
 
     img {
       &#logo-banner {
