@@ -14,11 +14,14 @@ import useDebounce from './hooks/useDebounce';
 import './SearchBar.scss';
 
 export const SearchBar: React.FC<{}> = () => {
-  const { setSearchResult, setSearchKeyword, setNoResult } = useContext(
-    AppContext
-  );
+  const {
+    input,
+    setInput,
+    setSearchResult,
+    setSearchKeyword,
+    setNoResult,
+  } = useContext(AppContext);
 
-  const [input, setInput] = useState('');
   const [term, setTerm] = useState('');
 
   const searchTerm = useDebounce(input, 200);
@@ -72,6 +75,7 @@ export const SearchBar: React.FC<{}> = () => {
         id="search-input"
         className="search-bar--input"
         placeholder="Enter a movie title"
+        type="text"
         value={input}
         onChange={event => setInput(event.target.value)}
         onFocus={handleFocus}
