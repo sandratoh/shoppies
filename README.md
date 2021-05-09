@@ -1,46 +1,43 @@
-# Getting Started with Create React App
+# The Shoppies Awards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Shoppies Awards is a challenge project completed for the Fall 2021 Shopify UX & Web Development Internship. It is a single-page responsive web application that allows users to search for movies and nominate them to Shopify's new movie award show: The Shoppies.
 
-## Available Scripts
+## Project Stack
 
-In the project directory, you can run:
+**Front-End**: TypeScript, React, HTML, SASS, Axios, Material UI  
+**Back-End**: Node.js  
+**API**: [OMDb - The Open Movie Database](http://www.omdbapi.com)
 
-### `npm start`
+## Final Product
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Project Features
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Dependencies
 
-### `npm test`
+- Axios
+- Classnames
+- Material UI
+- Node-sass
+- React
+- React-dom
+- React-scripts
+- Typescript
+- Web-vitals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+_Note: This project requires an OMDb API key. Please visit http://www.omdbapi.com/apikey.aspx for more information._
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Fork this repository, and clone your fork of the repository.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install dependencies with command: `npm install`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Create a `.env` file using `.env.example` as a reference: `cp .env.example .env`
 
-### `npm run eject`
+4. Insert OMDb API key into `.env` file
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+5. Once all dependencies are installed, run `npm start` to start the server
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. In your browser, go to `localhost:3000`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. Nominate away!
