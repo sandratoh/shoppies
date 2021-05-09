@@ -10,24 +10,32 @@ export interface IMovie {
   Poster: string;
 }
 
-interface IContext {
+interface INominations {
   nominations: IMovie[];
   setNominations: React.Dispatch<React.SetStateAction<IMovie[]>>;
+}
+
+interface IResult {
   searchResult: IMovie[];
   setSearchResult: React.Dispatch<React.SetStateAction<IMovie[]>>;
   searchKeyword: string;
   setSearchKeyword: React.Dispatch<React.SetStateAction<string>>;
-  openConfirm: boolean;
-  setOpenConfirm: React.Dispatch<React.SetStateAction<boolean>>;
-  openSubmit: boolean;
-  setOpenSubmit: React.Dispatch<React.SetStateAction<boolean>>;
   noResult: boolean;
   setNoResult: React.Dispatch<React.SetStateAction<boolean>>;
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
+}
+
+interface IDialogAlert {
+  openConfirm: boolean;
+  setOpenConfirm: React.Dispatch<React.SetStateAction<boolean>>;
+  openSubmit: boolean;
+  setOpenSubmit: React.Dispatch<React.SetStateAction<boolean>>;
   success: boolean;
   setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+interface IContext extends INominations, IResult, IDialogAlert {}
 
 // Context
 export const AppContext = createContext<IContext>({} as IContext);
