@@ -76,9 +76,6 @@ export const SearchBar: React.FC<{}> = () => {
         onChange={event => setInput(event.target.value)}
         onFocus={handleFocus}
       ></input>
-      <SearchButton
-        onClick={() => console.log('will remove this button soon')}
-      />
     </form>
   );
 };
