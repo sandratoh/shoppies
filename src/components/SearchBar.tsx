@@ -32,7 +32,7 @@ export const SearchBar: React.FC<{}> = () => {
   const handleClick = () => {
     return axios
       .get(
-        `http://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
+        `https://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       )
       .then(res => {
         const movieResult: IMovie[] = res.data.Search;
