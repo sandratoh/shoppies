@@ -12,9 +12,13 @@ View live application here: [The Shoppies Awards](https://shoppies-awards-nomina
 
 ## Final Product
 
+![Desktop and Tablet Mockup](https://github.com/sandratoh/shoppies/blob/master/docs/desktop-tablet-mockup.png)
+
+![Mobile Mockup](https://github.com/sandratoh/shoppies/blob/master/docs/mobile-mockup.png)
+
 ## Project Features
 
-### Technical Requirements
+#### Technical Requirements
 
 - Search results should come from OMDB's API.
 - Each search result should list at least its title, year of release and a button to nominate that film.
@@ -23,7 +27,7 @@ View live application here: [The Shoppies Awards](https://shoppies-awards-nomina
 - If a search result has already been nominated, disable its nominate button.
 - Display a banner when the user has 5 nominations.
 
-### Additional Features
+#### Additional Features
 
 - Responsive web design for desktop, tablet, and mobile view.
 - Nomination card badge showing number of nominees currently in users' list.
