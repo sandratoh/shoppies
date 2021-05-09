@@ -15,9 +15,15 @@
     justify-content: center;
     min-width: 560px;
 
-    h1 {
-      color: $white;
-      width: 80%;
+    img {
+      &#logo-banner {
+        height: 80%;
+      }
+
+      &#logo {
+        height: 70%;
+        display: none;
+      }
     }
   }
 
@@ -44,17 +50,23 @@
 }
 
 @media only screen and (max-width: 1220px) {
-  .App {
-    &--cards {
-      display: flex;
-      flex-direction: column;
-    }
+  .App--cards {
+    display: flex;
+    flex-direction: column;
+  }
+}
 
-    &--header {
-      height: 120px;
+@media only screen and (max-width: 900px) {
+  .App--header {
+    height: 120px;
 
-      h1 {
-        font-size: 48px;
+    img {
+      &#logo-banner {
+        display: none;
+      }
+
+      &#logo {
+        display: block;
       }
     }
   }

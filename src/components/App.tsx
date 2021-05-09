@@ -37,7 +37,8 @@ export const App: React.FC<{}> = () => {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App--header">
-          <h1>The Shoppies</h1>
+          <img id="logo" src={'/logo.png'} alt="logo" />
+          <img id="logo-banner" src={'/logo-banner.png'} alt="logo-banner" />
         </header>
         <main>
           <div className="App--search">
