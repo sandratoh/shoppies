@@ -2,10 +2,17 @@
 
 ## Features
 
-- [x] **Search bar** to enter movie title
+- [x] **Search bar**:
 
-- [x] **Result list** containing search result:
+  - [x] takes in movie title
+  - [x] return API result matching search string
+  - [x] autosearch with input change (stretch)
+  - [x] select all texts on focus (stretch)
+  - [x] clears texts with cta (stretch)
 
+- [x] **Result list**:
+
+  - [x] contains search result from OMDb API
   - [x] result string
   - [x] title
   - [x] year of release
@@ -27,6 +34,10 @@
   - [x] `Clear` CTA (stretch)
     - [x] clear all nominees from nomination list
     - [x] alert/confirmation before clearing
+  - [x] `Submit` CTA (stretch)
+    - [x] Submit nominees from nomination list
+    - [x] alert/confirmation before submission
+    - [x] banner change after submission
   - [x] sliding/fixed card with scroll (stretch)
 
 ## Technical Requirements

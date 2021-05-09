@@ -2,6 +2,8 @@
 
 The Shoppies Awards is a challenge project completed for the Fall 2021 Shopify UX & Web Development Internship. It is a single-page responsive web application that allows users to search for movies and nominate them to Shopify's new movie award show: The Shoppies.
 
+View live application here: [The Shoppies Awards](https://shoppies-awards-nominations.herokuapp.com/)
+
 ## Project Stack
 
 **Front-End**: TypeScript, React, HTML, SASS, Axios, Material UI  
@@ -11,6 +13,25 @@ The Shoppies Awards is a challenge project completed for the Fall 2021 Shopify U
 ## Final Product
 
 ## Project Features
+
+### Technical Requirements
+
+- Search results should come from OMDB's API.
+- Each search result should list at least its title, year of release and a button to nominate that film.
+- Updates to the search terms should update the result list
+- Movies in search results can be added and removed from the nomination list.
+- If a search result has already been nominated, disable its nominate button.
+- Display a banner when the user has 5 nominations.
+
+### Additional Features
+
+- Responsive web design for desktop, tablet, and mobile view.
+- Nomination card badge showing number of nominees currently in users' list.
+- Disable all nomination buttons with prompt to submit or remove nominees when user has 5 films.
+- Auto-search functionality with debounced input to optimize event handler and app performance.
+- Result card call-to-actions clear result list and/or auto-focus to search bar input field for new search.
+- User confirmation dialog when submitting or clearing nomination list.
+- Disable submit button if nomination list has not changed from previous submission.
 
 ## Dependencies
 
