@@ -16,6 +16,9 @@ import { AppContext } from '../Provider/DataProvider';
 import './App.scss';
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: ['Open Sans', 'sans-serif'].join(','),
+  },
   palette: {
     primary: {
       main: '#004c3f',
