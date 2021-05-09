@@ -18,8 +18,18 @@ export const ResultCardList: React.FC<{}> = () => {
       return 'Search for your favourite movie!';
     }
 
+    const movieIds: string[] = [];
+
     const movies = searchResult.map((movie: IMovie) => {
-      return <ResultCardListItem {...movie} key={movie.imdbID} />;
+      const duplicatedMovie = movieIds.includes(movie.imdbID);
+
+      if (!duplicatedMovie) {
+        movieIds.push(movie.imdbID);
+        return (
+          <ResultCardListItem {...movie} key={searchResult.indexOf(movie)} />
+        );
+      }
+      return null;
     });
 
     return result.length !== 0
