@@ -1,15 +1,15 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import Button from '../Button';
 import CardBanner from './CardBanner';
 import NominationCardList from './NominationCardList';
 
-// Material UI Component
+// Material UI Components
 import Card from '@material-ui/core/Card';
 
-// Helper
+// Helpers
 import { AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
@@ -18,9 +18,7 @@ import './Nomination.scss';
 export const NominationCard: React.FC<{}> = () => {
   const { nominations, setOpen } = useContext(AppContext);
 
-  const handleClear = () => {
-    setOpen(true);
-  };
+  const handleClear = () => setOpen(true);
 
   return (
     <Card className="nomination-card">

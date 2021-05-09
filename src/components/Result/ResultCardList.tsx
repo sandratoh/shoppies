@@ -1,7 +1,7 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import ResultCardListItem from './ResultCardListItem';
 
 // Helpers

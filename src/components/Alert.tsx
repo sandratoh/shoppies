@@ -1,4 +1,4 @@
-// Material UI Component
+// Material UI Components
 import Alert from '@material-ui/lab/Alert';
 
 export const AppAlert: React.FC<{}> = () => {

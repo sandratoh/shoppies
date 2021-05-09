@@ -1,7 +1,7 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import NominationCardListItem from './NominationCardListItem';
 
 // Helpers

@@ -1,10 +1,10 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import Button from '../Button';
 
-// Helper
+// Helpers
 import { IMovie, AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet

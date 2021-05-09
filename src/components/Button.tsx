@@ -1,7 +1,7 @@
 // Libraries
 import classNames from 'classnames';
 
-// Material UI Component
+// Material UI Components
 import Button from '@material-ui/core/Button';
 
 // Stylesheet

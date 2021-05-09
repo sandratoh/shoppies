@@ -1,14 +1,14 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import Button from '../Button';
 import ResultCardList from './ResultCardList';
 
-// Material UI Component
+// Material UI Components
 import Card from '@material-ui/core/Card';
 
-// Helper
+// Helpers
 import { AppContext } from '../../Provider/DataProvider';
 
 // Stylesheet
@@ -51,9 +51,7 @@ export const ResultCard: React.FC<{}> = () => {
     );
   };
 
-  const handleSearch = () => {
-    document.getElementById('search-input')?.focus();
-  };
+  const handleSearch = () => document.getElementById('search-input')?.focus();
 
   const handleClear = () => {
     setSearchKeyword('');

@@ -2,13 +2,13 @@
 import { useContext, useState } from 'react';
 import axios from 'axios';
 
-// Component
+// Components
 import SearchButton from './SearchButton';
 
-// Material UI Component
+// Material UI Components
 import SearchIcon from '@material-ui/icons/Search';
 
-// Helper
+// Helpers
 import { IMovie, AppContext } from '../Provider/DataProvider';
 
 // Stylesheet
@@ -23,9 +23,7 @@ export const SearchBar: React.FC<{}> = () => {
     event.preventDefault();
   };
 
-  const handleFocus = (event: any) => {
-    event.target.select();
-  };
+  const handleFocus = (event: any) => event.target.select();
 
   const handleClickIcon = () => {
     document.getElementById('search-input')?.focus();

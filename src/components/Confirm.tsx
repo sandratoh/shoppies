@@ -1,10 +1,10 @@
 // Libraries
 import { useContext } from 'react';
 
-// Component
+// Components
 import Button from './Button';
 
-// Material UI Component
+// Material UI Components
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -17,7 +17,7 @@ import { AppContext } from '../Provider/DataProvider';
 // Stylesheet
 import './Confirm.scss';
 
-export const Confirm = () => {
+export const Confirm: React.FC<{}> = () => {
   const { nominations, setNominations, open, setOpen } = useContext(AppContext);
 
   const handleConfirm = () => {
@@ -25,9 +25,7 @@ export const Confirm = () => {
     setOpen(false);
   };
 
-  const handleCancel = () => {
-    setOpen(false);
-  };
+  const handleCancel = () => setOpen(false);
 
   const movieList =
     nominations.length > 0

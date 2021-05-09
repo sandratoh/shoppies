@@ -1,5 +1,7 @@
+// Libraries
 import React, { createContext, useState } from 'react';
 
+// Interfaces
 export interface IMovie {
   Title: string;
   Year: string;
@@ -19,8 +21,10 @@ interface IContext {
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
+// Context
 export const AppContext = createContext<IContext>({} as IContext);
 
+// Provider
 export const DataProvider: React.FC<{}> = props => {
   const [nominations, setNominations] = useState<IMovie[]>([]);
 
@@ -40,8 +44,6 @@ export const DataProvider: React.FC<{}> = props => {
     open,
     setOpen,
   };
-
-  // console.log('data', data);
 
   return (
     <AppContext.Provider value={data}>{props.children}</AppContext.Provider>
