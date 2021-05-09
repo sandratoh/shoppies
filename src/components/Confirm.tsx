@@ -43,7 +43,7 @@ export const Confirm: React.FC<{}> = () => {
       maxWidth="sm"
     >
       <DialogTitle id="alert-dialog-title">
-        {'Clear All from Nomination List?'}
+        <h4>Clear All from Nomination List?</h4>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
