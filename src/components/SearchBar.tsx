@@ -1,5 +1,5 @@
 // Libraries
-import { useContext, useState, useCallback, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Components
@@ -38,7 +38,8 @@ export const SearchBar: React.FC<{}> = () => {
   }, [term, setSearchResult, setSearchKeyword]);
 
   useEffect(() => {
-    setTerm(searchTerm);
+    const trimmedTerm = searchTerm.trim();
+    setTerm(trimmedTerm);
   }, [searchTerm]);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -50,24 +51,6 @@ export const SearchBar: React.FC<{}> = () => {
   const handleClickIcon = () => {
     document.getElementById('search-input')?.focus();
   };
-
-  // const handleClick = () => {
-  //   return axios
-  //     .get(
-  //       `https://www.omdbapi.com/?s=${input}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
-  //     )
-  //     .then(res => {
-  //       const movieResult: IMovie[] = res.data.Search;
-  //       if (movieResult) {
-  //         setSearchResult(movieResult);
-  //         setSearchKeyword(input);
-  //       } else {
-  //         alert(
-  //           "Sorry, we couldn't find any movies matching your search. Try again with a different title."
-  //         );
-  //       }
-  //     });
-  // };
 
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
