@@ -16,6 +16,7 @@ import './Result.scss';
 
 export const ResultCard: React.FC<{}> = () => {
   const {
+    setNoResult,
     setInput,
     searchResult,
     searchKeyword,
@@ -57,6 +58,7 @@ export const ResultCard: React.FC<{}> = () => {
   const handleSearch = () => document.getElementById('search-input')?.focus();
 
   const handleClear = () => {
+    setNoResult(true);
     setSearchKeyword('');
     setSearchResult([]);
     setInput('');
