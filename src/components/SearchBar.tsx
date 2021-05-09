@@ -27,24 +27,22 @@ export const SearchBar: React.FC<{}> = () => {
   const searchTerm = useDebounce(input, 200);
 
   useEffect(() => {
-    axios
-      .get(
-        `https://www.omdbapi.com/?s=${term}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
-      )
-      .then(res => {
-        setSearchKeyword(term);
+    const apiUrl = `https://www.omdbapi.com/?s=${term}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`;
 
-        const movieResult: IMovie[] = res.data.Search;
+    axios.get(apiUrl).then(res => {
+      setSearchKeyword(term);
 
-        if (!movieResult) {
-          setSearchResult([]);
-          setNoResult(true);
-          return;
-        }
+      const movieResult: IMovie[] = res.data.Search;
 
-        setSearchResult(movieResult);
-        setNoResult(false);
-      });
+      if (!movieResult) {
+        setSearchResult([]);
+        setNoResult(true);
+        return;
+      }
+
+      setSearchResult(movieResult);
+      setNoResult(false);
+    });
   }, [term, setSearchResult, setSearchKeyword, setNoResult]);
 
   useEffect(() => {
@@ -80,9 +78,11 @@ export const SearchBar: React.FC<{}> = () => {
         onChange={event => setInput(event.target.value)}
         onFocus={handleFocus}
       ></input>
-      <span className="search-bar--icon">
-        <ClearIcon onClick={handleClearIcon} />
-      </span>
+      {input.length > 0 && (
+        <span className="search-bar--icon">
+          <ClearIcon onClick={handleClearIcon} />
+        </span>
+      )}
     </form>
   );
 };
