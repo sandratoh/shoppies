@@ -15,10 +15,13 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { AppContext } from '../Provider/DataProvider';
 
 export const Submit: React.FC<{}> = () => {
-  const { nominations, openSubmit, setOpenSubmit } = useContext(AppContext);
+  const { nominations, openSubmit, setOpenSubmit, setSuccess } = useContext(
+    AppContext
+  );
 
   const handleSubmit = () => {
     setOpenSubmit(false);
+    setSuccess(true);
   };
 
   const handleCancel = () => setOpenSubmit(false);

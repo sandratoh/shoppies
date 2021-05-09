@@ -25,6 +25,8 @@ interface IContext {
   setNoResult: React.Dispatch<React.SetStateAction<boolean>>;
   input: string;
   setInput: React.Dispatch<React.SetStateAction<string>>;
+  success: boolean;
+  setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Context
@@ -45,6 +47,8 @@ export const DataProvider: React.FC<{}> = props => {
 
   const [input, setInput] = useState('');
 
+  const [success, setSuccess] = useState(false);
+
   const data = {
     nominations,
     setNominations,
@@ -60,6 +64,8 @@ export const DataProvider: React.FC<{}> = props => {
     setNoResult,
     input,
     setInput,
+    success,
+    setSuccess,
   };
 
   return (
