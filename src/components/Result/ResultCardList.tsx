@@ -11,14 +11,20 @@ import { IMovie, AppContext } from '../../Provider/DataProvider';
 import './Result.scss';
 
 export const ResultCardList: React.FC<{}> = () => {
-  const { searchResult } = useContext(AppContext);
+  const { searchResult, searchKeyword, noResult } = useContext(AppContext);
 
   const cardContentByResult = (result: IMovie[]) => {
+    if (noResult && searchKeyword === '') {
+      return 'Search for your favourite movie!';
+    }
+
     const movies = searchResult.map((movie: IMovie) => {
       return <ResultCardListItem {...movie} key={movie.imdbID} />;
     });
 
-    return result.length !== 0 ? movies : 'Search for your favourite movie!';
+    return result.length !== 0
+      ? movies
+      : "Sorry, we couldn't find a movie with that title. Try another one!";
   };
 
   return (

@@ -24,8 +24,10 @@ export const ResultCard: React.FC<{}> = () => {
 
   const cardFooter = (): JSX.Element => {
     const emptyResult = searchResult.length === 0;
+    const emptySearch = searchKeyword === '';
 
-    const searchString = emptyResult ? 'Search Now' : 'Search Again';
+    const searchString =
+      emptyResult && emptySearch ? 'Search Now' : 'Search Again';
 
     const searchCTA = (
       <Button variant="text" link onClick={handleSearch}>

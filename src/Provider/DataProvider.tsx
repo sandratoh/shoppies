@@ -19,6 +19,8 @@ interface IContext {
   setSearchKeyword: React.Dispatch<React.SetStateAction<string>>;
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  noResult: boolean;
+  setNoResult: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 // Context
@@ -34,6 +36,8 @@ export const DataProvider: React.FC<{}> = props => {
 
   const [open, setOpen] = useState(false);
 
+  const [noResult, setNoResult] = useState(true);
+
   const data = {
     nominations,
     setNominations,
@@ -43,6 +47,8 @@ export const DataProvider: React.FC<{}> = props => {
     setSearchKeyword,
     open,
     setOpen,
+    noResult,
+    setNoResult,
   };
 
   return (

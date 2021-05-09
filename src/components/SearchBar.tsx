@@ -1,5 +1,5 @@
 // Libraries
-import { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 
 // Components
@@ -16,7 +16,9 @@ import useDebounce from './hooks/useDebounce';
 import './SearchBar.scss';
 
 export const SearchBar: React.FC<{}> = () => {
-  const { setSearchResult, setSearchKeyword } = useContext(AppContext);
+  const { setSearchResult, setSearchKeyword, setNoResult } = useContext(
+    AppContext
+  );
 
   const [input, setInput] = useState('');
   const [term, setTerm] = useState('');
@@ -29,13 +31,20 @@ export const SearchBar: React.FC<{}> = () => {
         `https://www.omdbapi.com/?s=${term}&type=movie&apikey=${process.env.REACT_APP_OMDB_API_KEY}`
       )
       .then(res => {
+        setSearchKeyword(term);
+
         const movieResult: IMovie[] = res.data.Search;
-        if (movieResult) {
-          setSearchResult(movieResult);
-          setSearchKeyword(term);
+
+        if (!movieResult) {
+          setSearchResult([]);
+          setNoResult(true);
+          return;
         }
+
+        setSearchResult(movieResult);
+        setNoResult(false);
       });
-  }, [term, setSearchResult, setSearchKeyword]);
+  }, [term, setSearchResult, setSearchKeyword, setNoResult]);
 
   useEffect(() => {
     const trimmedTerm = searchTerm.trim();
@@ -46,7 +55,9 @@ export const SearchBar: React.FC<{}> = () => {
     event.preventDefault();
   };
 
-  const handleFocus = (event: any) => event.target.select();
+  const handleFocus = (event: React.FocusEvent<HTMLInputElement>) => {
+    event.target.select();
+  };
 
   const handleClickIcon = () => {
     document.getElementById('search-input')?.focus();
@@ -60,6 +71,7 @@ export const SearchBar: React.FC<{}> = () => {
       <input
         id="search-input"
         className="search-bar--input"
+        placeholder="Enter a movie title"
         value={input}
         onChange={event => setInput(event.target.value)}
         onFocus={handleFocus}
