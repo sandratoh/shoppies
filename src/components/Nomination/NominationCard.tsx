@@ -16,7 +16,9 @@ import { AppContext } from '../../Provider/DataProvider';
 import './Nomination.scss';
 
 export const NominationCard: React.FC<{}> = () => {
-  const { nominations, setOpenConfirm, setOpenSubmit } = useContext(AppContext);
+  const { nominations, setOpenConfirm, setOpenSubmit, success } = useContext(
+    AppContext
+  );
 
   const handleClear = () => setOpenConfirm(true);
 
@@ -34,7 +36,7 @@ export const NominationCard: React.FC<{}> = () => {
           <Button variant="text" link onClick={handleClear}>
             Clear All
           </Button>
-          <Button variant="text" link onClick={handleSubmit}>
+          <Button variant="text" link onClick={handleSubmit} disabled={success}>
             Submit Nominations
           </Button>
         </div>
