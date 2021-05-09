@@ -9,22 +9,32 @@
   border: solid $secondary-color;
   border-radius: $round-corner--bar;
   background-color: $white;
+
+  &--icon {
+    margin: 16px;
+    color: $black;
+    display: flex;
+  }
+
+  &--input {
+    @include height-width(95%, 100%);
+    @include typography-style($body-font, 20px, $regular-weight);
+    display: flex;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
-.search-bar--icon {
-  margin: 16px;
-  color: $black;
-  display: flex;
-}
+@media only screen and (max-width: 1220px) {
+  .search-bar {
+    height: 56px;
 
-.search-bar--input {
-  @include height-width(95%, 100%);
-  @include typography-style($body-font, 20px, $regular-weight);
-  display: flex;
-  background-color: transparent;
-  border: none;
-
-  &:focus {
-    outline: none;
+    &--input {
+      font-size: 16px;
+    }
   }
 }

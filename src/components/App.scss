@@ -41,30 +41,45 @@
   }
 
   &--cards {
-    margin: 40px 0;
     display: flex;
     justify-content: space-between;
   }
 }
 
 @media only screen and (max-width: 1220px) {
-  .App--cards {
-    display: flex;
-    flex-direction: column;
+  .App {
+    main {
+      width: 85%;
+    }
+
+    &--search h3 {
+      font-size: 20px;
+    }
+
+    &--cards {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
 @media only screen and (max-width: 900px) {
-  .App--header {
-    height: 120px;
+  .App {
+    main {
+      width: 90%;
+    }
 
-    img {
-      &#logo-banner {
-        display: none;
-      }
+    &--header {
+      height: 120px;
 
-      &#logo {
-        display: block;
+      img {
+        &#logo-banner {
+          display: none;
+        }
+
+        &#logo {
+          display: block;
+        }
       }
     }
   }
