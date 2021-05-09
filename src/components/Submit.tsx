@@ -15,12 +15,9 @@ import DialogTitle from '@material-ui/core/DialogTitle';
 import { AppContext } from '../Provider/DataProvider';
 
 export const Submit: React.FC<{}> = () => {
-  const { nominations, setNominations, openSubmit, setOpenSubmit } = useContext(
-    AppContext
-  );
+  const { nominations, openSubmit, setOpenSubmit } = useContext(AppContext);
 
   const handleSubmit = () => {
-    setNominations([]);
     setOpenSubmit(false);
   };
 
@@ -45,7 +42,7 @@ export const Submit: React.FC<{}> = () => {
       maxWidth="sm"
     >
       <DialogTitle id="alert-dialog-title">
-        <h4>Submit Nomination List?</h4>
+        <span className="dialog-title">Submit Nomination List?</span>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">

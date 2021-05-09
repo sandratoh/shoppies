@@ -19,6 +19,7 @@ h3 {
   @include typography-style($heading-font, 24px, $semibold-weight);
 }
 
+.dialog-title,
 h4 {
   @include typography-style($body-font, 24px, $semibold-weight);
 }
