@@ -29,10 +29,10 @@
     display: flex;
     flex-direction: column;
     width: 80%;
+    margin: 40px 0;
   }
 
   &--search {
-    margin: 40px 0;
     width: 100%;
 
     h3 {
@@ -43,6 +43,10 @@
   &--cards {
     display: flex;
     justify-content: space-between;
+  }
+
+  &--alert {
+    margin: 24px 0;
   }
 }
 
