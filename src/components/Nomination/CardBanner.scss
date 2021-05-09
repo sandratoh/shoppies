@@ -17,3 +17,13 @@
     background-color: $danger-color;
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .card-banner {
+    @include height-width(48px, 80px);
+
+    h4 {
+      font-size: 20px;
+    }
+  }
+}

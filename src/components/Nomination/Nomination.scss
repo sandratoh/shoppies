@@ -1,5 +1,5 @@
 .nomination-card {
-  min-height: 213px;
+  min-height: 221px;
   width: 48%;
   height: fit-content;
   position: -webkit-sticky;
@@ -17,7 +17,7 @@
     justify-content: space-between;
 
     h2 {
-      padding: 32px 40px;
+      padding: 32px 40px 16px;
     }
   }
 
@@ -29,7 +29,7 @@
   }
 
   &--list {
-    margin: 0 40px 40px;
+    margin: 24px 40px 40px;
   }
 
   &--item {
@@ -51,13 +51,29 @@
     margin-top: 40px;
     width: 100%;
     font-size: 15px;
+    min-height: 197px;
 
     &--header h2 {
       font-size: 24px;
+      padding-bottom: 0;
     }
 
     &--item p {
       font-size: 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nomination-card {
+    min-height: 165px;
+
+    &--header h2 {
+      padding: 24px 24px 0;
+    }
+
+    &--list {
+      margin: 16px 24px 24px;
     }
   }
 }
