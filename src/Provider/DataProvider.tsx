@@ -1,5 +1,5 @@
 // Libraries
-import React, { createContext, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 
 // Interfaces
 export interface IMovie {
@@ -34,36 +34,43 @@ export const AppContext = createContext<IContext>({} as IContext);
 
 // Provider
 export const DataProvider: React.FC<{}> = props => {
+  // Nomination states
   const [nominations, setNominations] = useState<IMovie[]>([]);
 
+  // Result states
   const [searchResult, setSearchResult] = useState<IMovie[]>([]);
-
-  const [searchKeyword, setSearchKeyword] = useState<string>('');
-
-  const [openConfirm, setOpenConfirm] = useState(false);
-  const [openSubmit, setOpenSubmit] = useState(false);
-
+  const [input, setInput] = useState('');
+  const [searchKeyword, setSearchKeyword] = useState('');
   const [noResult, setNoResult] = useState(true);
 
-  const [input, setInput] = useState('');
-
+  // Dialog/Alert states
+  const [openConfirm, setOpenConfirm] = useState(false);
+  const [openSubmit, setOpenSubmit] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  useEffect(() => {
+    setSuccess(false);
+  }, [nominations, searchResult]);
+
+  // Export states
   const data = {
+    // Nomination
     nominations,
     setNominations,
+    // Result
     searchResult,
     setSearchResult,
     searchKeyword,
     setSearchKeyword,
-    openConfirm,
-    setOpenConfirm,
-    openSubmit,
-    setOpenSubmit,
     noResult,
     setNoResult,
     input,
     setInput,
+    // Dialog/Alert
+    openConfirm,
+    setOpenConfirm,
+    openSubmit,
+    setOpenSubmit,
     success,
     setSuccess,
   };
