@@ -8,7 +8,7 @@ import SearchIcon from '@material-ui/icons/Search';
 
 // Helpers
 import { IMovie, AppContext } from '../Provider/DataProvider';
-import useDebounce from './hooks/useDebounce';
+import useDebounce from '../hooks/useDebounce';
 
 // Stylesheet
 import './SearchBar.scss';
