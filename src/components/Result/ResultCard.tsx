@@ -62,6 +62,7 @@ export const ResultCard: React.FC<{}> = () => {
     setSearchKeyword('');
     setSearchResult([]);
     setInput('');
+    handleSearch();
   };
 
   const cardHeadingBySearch = (search: string) => {

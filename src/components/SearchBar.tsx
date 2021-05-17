@@ -62,7 +62,10 @@ export const SearchBar: React.FC<{}> = () => {
     document.getElementById('search-input')?.focus();
   };
 
-  const handleClearIcon = () => setInput('');
+  const handleClearIcon = () => {
+    setInput('');
+    handleSearchIcon();
+  };
 
   return (
     <form className="search-bar" onSubmit={handleSubmit}>
